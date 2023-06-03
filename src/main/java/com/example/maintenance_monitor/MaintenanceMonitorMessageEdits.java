@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MaintenanceMonitorMessageEdits {
     private String m = "Everything operates as expected";
     @RequestMapping("/api/message/set")
-    public String setmessage(@RequestParam String m){
+    public String setMessage(@RequestParam String m){
         if (m==null) {
             m="Everything operates as expected";
         }
@@ -17,11 +17,11 @@ public class MaintenanceMonitorMessageEdits {
     }
     @RequestMapping("/api/message/reset")
     public  String reset(){
-        setmessage(null);
+        setMessage(null);
     return "ok";
     }
     @RequestMapping("/api/message")
-    public String getmessage(){
+    public String getMessage(){
         return m;
     }
 }
