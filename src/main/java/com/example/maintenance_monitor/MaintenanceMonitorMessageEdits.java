@@ -24,4 +24,5 @@ public class MaintenanceMonitorMessageEdits {
     public String getMessage(){
         return m;
     }
+
 }
