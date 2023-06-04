@@ -8,9 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MaintenanceMonitorApplicationTests {
 	private MaintenanceMonitorMessageEdits maintenanceMonitor=new MaintenanceMonitorMessageEdits();
 	String defaultMessage = "Everything operates as expected";
+
 	@Test
 	void contextLoads() {
 	}
+
 	@Test
 	public void testSetMessage() {
 		String message = "New message";
@@ -18,6 +20,7 @@ class MaintenanceMonitorApplicationTests {
 
 		assertEquals(maintenanceMonitor.getMessage(),message);
 	}
+
 	@Test
 	public void testReset() {
 		String randomMessage="Some message";
@@ -26,6 +29,7 @@ class MaintenanceMonitorApplicationTests {
 
 		assertEquals(defaultMessage, maintenanceMonitor.getMessage());
 	}
+
 	@Test
 	public void testNullMessage() {
 		String nullMessage = null;
@@ -33,6 +37,7 @@ class MaintenanceMonitorApplicationTests {
 
 		assertEquals(defaultMessage, maintenanceMonitor.getMessage());
 	}
+
 	@Test
 	public void testUpdateMessage() {
 		String initialMessage = "Initial message";
@@ -42,6 +47,7 @@ class MaintenanceMonitorApplicationTests {
 
 		assertEquals(updatedMessage, maintenanceMonitor.getMessage());
 	}
+
 	@Test
 	public void testResetWithNoMessageSet() {
 		maintenanceMonitor.reset();
