@@ -6,21 +6,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 class MaintenanceMonitorApplicationTests {
-	private MaintenanceMonitorMessageEdits maintenanceMonitor;
+	private MaintenanceMonitorMessageEdits maintenanceMonitor=new MaintenanceMonitorMessageEdits();
 	@Test
 	void contextLoads() {
 	}
 	@Test
 	public void testSetMessage() {
+
 		String message = "New message";
 		maintenanceMonitor.setMessage(message);
-		assertEquals(message, maintenanceMonitor.getMessage());
+		assertEquals(maintenanceMonitor.getMessage(),message);
 	}
 	@Test
 	public void testReset() {
-		maintenanceMonitor.setMessage("Some message");
+		String defaultMessage="Everything operates as expected";
+		String randomMessage="Some message";
+		maintenanceMonitor.setMessage(randomMessage);
 		maintenanceMonitor.reset();
-		assertEquals("Everything operates as expected", maintenanceMonitor.getMessage());
+		assertEquals(defaultMessage, maintenanceMonitor.getMessage());
 	}
 
 }
