@@ -62,6 +62,11 @@ class MaintenanceMonitorApplicationTests {
 
 		assertEquals(defaultMessage, maintenanceMonitor.getMessage());
 	}
+	@Test
+	public void testDefault() {
+
+		assertEquals(defaultMessage, maintenanceMonitor.getMessage());
+	}
 
 
 
