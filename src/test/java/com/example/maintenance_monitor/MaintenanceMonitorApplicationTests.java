@@ -5,8 +5,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-class MaintenanceMonitorApplicationTests {
-	private MaintenanceMonitorMessageEdits maintenanceMonitor=new MaintenanceMonitorMessageEdits();
+class MaintenanceMonitorControllerTest {
+	private MaintenanceMonitorController maintenanceMonitor=new MaintenanceMonitorController();
 	String defaultMessage = "Everything operates as expected";
 
 	@Test
