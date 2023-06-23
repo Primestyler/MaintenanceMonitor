@@ -67,7 +67,5 @@ class MaintenanceMonitorControllerTest {
 
 		assertEquals(defaultMessage, maintenanceMonitor.getMessage());
 	}
-
-
-
+	
 }
