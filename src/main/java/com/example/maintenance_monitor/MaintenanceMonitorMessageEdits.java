@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MaintenanceMonitorMessageEdits {
-    private String m = "Everything operates as expected";
+    private String m = "Everything operates as expected you are bad";
     @RequestMapping("/api/message/set")
     public String setMessage(@RequestParam String m){
         if (m==null) {
