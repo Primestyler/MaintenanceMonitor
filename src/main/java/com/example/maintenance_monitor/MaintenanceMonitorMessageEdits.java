@@ -12,7 +12,6 @@ public class MaintenanceMonitorMessageEdits {
             m="Everything operates as expected";
         }
             this.m=m;
-
         return "ok";
     }
     @RequestMapping("/api/message/reset")
